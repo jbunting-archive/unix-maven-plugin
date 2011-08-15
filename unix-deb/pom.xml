@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.mortbay.jetty.toolchain.unix</groupId>
     <artifactId>unix-parent</artifactId>
-    <version>1.0-alpha-7-SNAPSHOT</version>
+    <version>1.0-alpha-6.1</version>
   </parent>
   <artifactId>unix-deb</artifactId>
   <name>Jetty :: Release Fork :: Maven Deb Support</name>

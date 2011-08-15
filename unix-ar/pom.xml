@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.mortbay.jetty.toolchain.unix</groupId>
     <artifactId>unix-parent</artifactId>
-    <version>1.0-alpha-7-SNAPSHOT</version>
+    <version>1.0-alpha-6.1</version>
   </parent>
   <artifactId>unix-ar</artifactId>
   <name>Jetty :: Release Fork :: Maven Ar File Format Tools</name>
