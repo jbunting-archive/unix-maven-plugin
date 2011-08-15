@@ -26,12 +26,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>mojo-parent</artifactId>
-    <groupId>org.codehaus.mojo</groupId>
-    <version>27</version>
+    <artifactId>jetty-parent</artifactId>
+    <groupId>org.mortbay.jetty</groupId>
+    <version>12</version>
   </parent>
-  <groupId>org.codehaus.mojo.unix</groupId>
-  <artifactId>unix</artifactId>
+  <groupId>org.mortbay.jetty.toolchain.unix</groupId>
+  <artifactId>unix-parent</artifactId>
   <version>1.0-alpha-6-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Maven Unix Support</name>
@@ -105,8 +105,8 @@
   </licenses>
   <scm>
     <url>https://svn.codehaus.org/mojo/trunk/mojo/unix</url>
-    <connection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/unix</connection>
-    <developerConnection>scm:svn:https://svn.codehaus.org/mojo/trunk/mojo/unix</developerConnection>
+    <connection>scm:git:git://github.com:jetty-project/unix-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:jetty-project/unix-maven-plugin.git</developerConnection>
   </scm>
   <dependencies>
     <dependency>
@@ -185,7 +185,7 @@
     <profile>
       <id>handbook</id>
       <activation>
-        <activeByDefault>true</activeByDefault>
+        <activeByDefault>false</activeByDefault>
       </activation>
       <modules>
         <module>unix-handbook</module>

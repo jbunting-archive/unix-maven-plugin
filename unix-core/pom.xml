@@ -26,12 +26,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>org.codehaus.mojo.unix</groupId>
-    <artifactId>unix</artifactId>
+    <groupId>org.mortbay.jetty.toolchain.unix</groupId>
+    <artifactId>unix-parent</artifactId>
     <version>1.0-alpha-6-SNAPSHOT</version>
   </parent>
   <artifactId>unix-core</artifactId>
-  <name>Maven Unix Plugin Core</name>
+  <name>Jetty :: Release Fork :: Maven Unix Plugin Core</name>
   <dependencies>
     <dependency>
       <groupId>org.codehaus.mojo.unix</groupId>
