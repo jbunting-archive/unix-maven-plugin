@@ -34,7 +34,7 @@
   <artifactId>unix-parent</artifactId>
   <version>1.0-alpha-6-SNAPSHOT</version>
   <packaging>pom</packaging>
-  <name>Maven Unix Support</name>
+  <name>Jetty :: Release Fork :: Maven Unix Support</name>
   <inceptionYear>2008</inceptionYear>
   <description>Supporting tools for writing software for the UNIX platform</description>
   <properties>
