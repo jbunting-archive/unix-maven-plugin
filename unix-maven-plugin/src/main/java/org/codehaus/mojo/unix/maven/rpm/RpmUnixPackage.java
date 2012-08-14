@@ -25,6 +25,8 @@ package org.codehaus.mojo.unix.maven.rpm;
  */
 
 import fj.*;
+import fj.data.*;
+
 import static fj.P.*;
 import org.apache.commons.vfs.*;
 import org.codehaus.mojo.unix.*;
@@ -84,11 +86,29 @@ public class RpmUnixPackage
         return this;
     }
 
-    public UnixPackage group( String group )
+    public RpmUnixPackage group( String group )
     {
         specFile.group = group;
         return this;
     }
+
+	public RpmUnixPackage provides( List<String> provides )
+	{
+		specFile.provides = provides;
+		return this;
+	}
+
+	public RpmUnixPackage requires( List<String> requires )
+	{
+		specFile.requires = requires;
+		return this;
+	}
+
+	public RpmUnixPackage conflicts( List<String> conflicts )
+	{
+		specFile.conflicts = conflicts;
+		return this;
+	}
 
     public UnixPackage workingDirectory( FileObject workingDirectory )
         throws FileSystemException

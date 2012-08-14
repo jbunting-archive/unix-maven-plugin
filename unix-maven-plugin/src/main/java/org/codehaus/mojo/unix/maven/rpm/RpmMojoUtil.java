@@ -25,8 +25,13 @@ package org.codehaus.mojo.unix.maven.rpm;
  */
 
 import fj.*;
+import fj.data.*;
+
 import org.codehaus.mojo.unix.*;
+import org.codehaus.mojo.unix.java.*;
 import org.codehaus.mojo.unix.maven.plugin.*;
+
+import static fj.Function.flip;
 
 /**
  * @author <a href="mailto:trygvis@codehaus.org">Trygve Laugst&oslash;l</a>
@@ -50,6 +55,9 @@ public class RpmMojoUtil
         }
 
         return RpmUnixPackage.cast( unixPackage ).
-            group( rpm.getGroup().some() );
+            group( rpm.getGroup().some() ).
+		    provides(rpm.getProvides().map( flip( StringF.split ).f( "," ) ).orSome( List.<String>nil())).
+		    requires(rpm.getRequires().map( flip( StringF.split ).f( "," ) ).orSome( List.<String>nil())).
+		    conflicts(rpm.getConflicts().map( flip( StringF.split ).f( "," ) ).orSome( List.<String>nil()));
     }
 }

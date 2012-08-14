@@ -35,6 +35,12 @@ public class RpmSpecificSettings
 {
     private Option<String> group = none();
 
+	private Option<String> provides = none();
+
+	private Option<String> requires = none();
+
+	private Option<String> conflicts = none();
+
     public Option<String> getGroup()
     {
         return group;
@@ -45,7 +51,37 @@ public class RpmSpecificSettings
         this.group = fromNull( group );
     }
 
-    public String toString()
+	public Option<String> getProvides()
+	{
+		return provides;
+	}
+
+	public void setProvides(final String provides)
+	{
+		this.provides = fromNull( provides );
+	}
+
+	public Option<String> getRequires()
+	{
+		return requires;
+	}
+
+	public void setRequires(final String requires)
+	{
+		this.requires = fromNull( requires );
+	}
+
+	public Option<String> getConflicts()
+	{
+		return conflicts;
+	}
+
+	public void setConflicts(final String conflicts)
+	{
+		this.conflicts = fromNull( conflicts );
+	}
+
+	public String toString()
     {
         return ToStringBuilder.reflectionToString( this, ToStringStyle.MULTI_LINE_STYLE );
     }
